@@ -1,0 +1,170 @@
+@import "../_media";
+@import "../_mixins";
+@import "../_variables";
+.footer {
+    background: #343737;
+    position: relative;
+    padding: 67px 0 62px;
+    @include mq('tablet') {
+        padding: 47px 0 42px;
+    }
+    a {
+        color: #99a0a0;
+        transition: color ease-in-out 0.5s;
+        &:hover {
+            color: #4db9d6;
+        }
+    }
+    &:after {
+        content: ' ';
+        display: block;
+        background: url(../image/footer-bg-left.png) no-repeat;
+        width: 315px;
+        height: 169px;
+        position:absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        @include mq('desktop-wide') {
+            background-size: 80%;
+            left: -150px;
+        }
+        @include mq('tablet-wide') {
+            display: none;
+        }
+    }
+    &:before {
+        content: ' ';
+        display: block;
+        background: url(../image/footer-bg.png) no-repeat;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 315px;
+        height: 331px;
+        @include mq('desktop-wide') {
+            background-size: 80%;
+            background-position: 100% 100%;
+        }
+        @include mq('tablet-wide') {
+            background-size: 70%;
+        }
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    /* title */
+    .title {
+        display: block;
+        font-size: 14px;
+        color: #fff;
+        font-family: $FontGothamProMedium;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin: 0 0 26px;
+        @include mq('phablet') {
+            margin: 0 0 16px;
+        }
+    }
+    /* menu */
+    .menu {
+        li {
+            margin: 0 0 16px;
+            @include mq('phablet') {
+                margin: 0 0 7px;
+            }
+        }
+        a {
+            display: inline-block;
+            line-height: 24px;
+            font-size: 16px;
+            color: #99a0a0;
+            transition: color ease-in-out 0.5s;
+
+            &:hover {
+                color: #4db9d6;
+            }
+        }
+    }
+    /* address */
+    address {
+        margin: 0 0 20px;
+        color: #fff;
+        font-style: normal;
+        line-height: 24px;
+        p {
+            margin: 0 0 5px;
+        }
+    }
+    dl {
+        margin: 0 0 20px;
+        color: #fff;
+        line-height: 25px;
+        dt {
+            display: block;
+        }
+        dd {
+            margin: 0;
+        }
+    }
+    .tel {
+        display: block;
+        color: #fff;
+        font-size: 20px;
+        font-family: $FontGothamProMedium;
+        line-height: 25px;
+        margin: 0 0 25px;
+    }
+    .copy {
+        font-size: 16px;
+        color: #fff;
+        margin: -21px 0 0;
+        @include mq('tablet') {
+            margin: 0;
+        }
+    }
+    .col-md-2 {
+        @include mq('tablet') {
+            display: inline-block;
+            float: left;
+            margin: 0 0 20px;
+        }
+    }
+    .contacts {
+        @include mq('tablet') {
+            width: 100%;
+        }
+        address {
+            @include mq('tablet') {
+                float: left;
+                margin: 0 27px 20px 0;
+                font-size: 15px;
+            }
+        }
+        dl {
+            @include mq('tablet') {
+                float: left;
+                margin: 0 27px 20px 0;
+                font-size: 15px;
+            }
+        }
+        .info {
+            @include mq('tablet') {
+                float: left;
+            }
+            .tel {
+                @include mq('tablet') {
+                    font-size: 18px;
+                    margin: 0 0 10px;
+                }
+            }
+            .btn {
+                @include mq('tablet') {
+                    padding: 0 10px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

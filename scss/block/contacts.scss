@@ -1,0 +1,169 @@
+@import "../_media";
+@import "../_mixins";
+@import "../_variables";
+
+.content {
+    /* map */
+    .holder-map {
+        margin: 0 0 60px;
+        @include mq("tablet-small") {
+            margin: 0 0 45px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+    /* forma */
+    .forma {
+        background: #f2f7f7;
+        margin: 0 0 10px;
+        padding: 48px 37px;
+        @include mq("tablet-small") {
+            padding: 38px 27px;
+        }
+        fieldset {
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            margin: 0 0 53px;
+            @include mq("phablet") {
+                margin: 0 0 43px;
+            }
+        }
+        .btn {
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            font-size: 17px;
+            color: #000;
+            margin: 0 0 13px;
+            font-family: $PlayfairDisplayRegular;
+        }
+        .input {
+            margin: 0 0 37px;
+            height: 60px;
+            @include mq("tablet-small") {
+                height: 45px;
+            }
+            input {
+                width: 100%;
+                padding: 5px 20px 2px;
+                height: 60px;
+                background: #fff;
+                color: #99a0a0;
+                font-size: 18px;
+                font-family: $FontGothamPro;
+                display: block;
+                margin: 0 0 12px;
+                @include mq("tablet-small") {
+                    height: 45px;
+                }
+                &::placeholder {
+                    color: #99a0a0;
+                    font-size: 18px;
+                    font-family: $FontGothamPro;
+                }
+            }
+        }
+        .row {
+            margin: 0 -15px;
+        }
+        .col {
+            padding: 0 15px;
+            @include mq("tablet-small") {
+                width: 100%;
+            }
+        }
+        .textarea {
+            width: 100%;
+            margin: 0 0 60px;
+            height: 120px;
+            @include mq("tablet-small") {
+                margin: 0 0 45px;
+            }
+            textarea {
+                width: 100%;
+                color: #99a0a0;
+                font-size: 18px;
+                font-family: $FontGothamPro;
+                padding:10px 20px;
+            }
+        }
+    }
+    /* holder-contacts */
+    .holder-contacts {
+        margin: 0 0 8px;
+        .contacts-box {
+            float: left;
+            width: calc(100% - 395px);
+            @include mq("tablet") {
+                width: calc(100% - 305px);
+            }
+            @include mq("tablet-small") {
+                float: none;
+                width: 100%;
+            }
+            &:first-child {
+                width: 265px;
+                margin: 0 120px 0 0;
+                @include mq("tablet") {
+                    margin: 0 40px 0 0;
+                }
+                @include mq("tablet-small") {
+                    width: 100%;
+                }
+            }
+        }
+        .important {
+            padding: 6px 0 9px 28px;
+            margin: 0 0 20px;
+        }
+        p + .important {
+            margin: 56px 0 20px;
+            @include mq("tablet") {
+                margin: 36px 0 20px;
+            }
+        }
+        h3 {
+            margin: 0 0 28px;
+        }
+        dl {
+            font-size: 16px;
+            color: #343737;
+            line-height: 27px;
+            margin: 0 0 46px;
+            @include mq("tablet") {
+                margin: 0 0 26px;
+            }
+            dt {
+                color: #4db9d6;
+                text-transform: uppercase;
+                float: left;
+                margin: 0 5px 0 0;
+            }
+            dd {
+                margin: 0;
+            }
+        }
+        address {
+            font-style: normal;
+            margin: 0 0 46px;
+            @include mq("tablet") {
+                margin: 0 0 26px;
+            }
+        }
+        .tel {
+            font-size: 16px;
+            color: #343737;
+            display: block;
+            padding: 5px 0 0;
+            margin: 0 0 46px;
+            @include mq("tablet") {
+                margin: 0 0 26px;
+            }
+        }
+    }
+}

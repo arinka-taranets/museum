@@ -1,0 +1,16 @@
+$FontGothamPro: 'GothamPro', sans-serif;
+$FontGothamProMedium: 'GothamPro-Medium', sans-serif;
+$PlayfairDisplayRegular: 'PlayfairDisplay-Regular', sans-serif;
+$PlayfairDisplayBold: 'PlayfairDisplay-Bold', sans-serif;
+$BgColorMain: #fff;
+$TextColorMain: #343737;
+$FontSizeText:16px;
+
+@keyframes infinite-spinning {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
